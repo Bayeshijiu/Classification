@@ -19,9 +19,8 @@ def find_params(x_train, y_train, clf):
     param4 = {'reg_alpha': [0.1, 1],
               'reg_lambda': [0.1, 1]}
 
-    gsearch = GridSearchCV(estimator=clf, param_grid=param1, scoring='f1_macro', cv=5,
-                           n_jobs=-1)  # 分类器默认为StratifiedKfold
+    gsearch = GridSearchCV(estimator=clf, param_grid=param1, scoring='f1_macro', cv=5)  # 分类器默认为StratifiedKfold
     gsearch.fit(x_train, y_train)
     print('The best_params is:', gsearch.best_params_, 'The score is %.5g' % gsearch.best_score_)
     
-    return gsearch
+    return gsearch.best_estimator_
