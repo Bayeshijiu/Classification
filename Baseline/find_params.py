@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@brief : 自动搜索分类器的最优的超参数值
+@brief : 通过GridSearchCV自动搜索分类器的最优的超参数值
 """
 from sklearn.model_selection import GridSearchCV
 
