@@ -23,7 +23,7 @@ project
 │    
 │
 └───scr
-│    
+│    │    config.py/setting.py
 │
 └───pynb
 │  
